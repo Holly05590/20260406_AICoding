@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurora Todo | 質感待辦清單</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="area" >
+        <ul class="circles">
+            <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+        </ul>
+    </div>
+    
+    <div class="app-container">
+        <header class="app-header">
+            <div class="header-content">
+                <h1>Aurora <span class="highlight">Todo</span></h1>
+                <p class="subtitle">Focus on what matters.</p>
+            </div>
+            <div class="date-display" id="currentDateDisplay">
+                <!-- Date inserted by JS -->
+            </div>
+        </header>
+
+        <section class="add-task-section glass-panel">
+            <form id="taskForm" class="task-form">
+                <div class="input-group">
+                    <input type="text" id="taskInput" placeholder="準備做些什麼呢？" required autocomplete="off">
+                </div>
+                <div class="datetime-group">
+                    <div class="input-with-icon">
+                        <i class="fa-regular fa-calendar"></i>
+                        <input type="date" id="taskDate" required>
+                    </div>
+                    <div class="input-with-icon">
+                        <i class="fa-regular fa-clock"></i>
+                        <input type="time" id="taskTime">
+                    </div>
+                    <button type="submit" class="btn-primary" id="addBtn">
+                        <i class="fa-solid fa-plus"></i> <span class="btn-text">新增</span>
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <section class="tasks-section">
+            <div class="tasks-header">
+                <h2>未完成任務 <span class="task-count" id="pendingCount">0</span></h2>
+            </div>
+            <ul id="pendingList" class="task-list">
+                <!-- Tasks will be added here -->
+            </ul>
+
+            <div class="tasks-header completed-header">
+                <h2>已完成 <span class="task-count" id="completedCount">0</span></h2>
+            </div>
+            <ul id="completedList" class="task-list completed-list">
+                <!-- Completed tasks will be added here -->
+            </ul>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

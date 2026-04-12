@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurora Todo | Logo 選項預覽</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #040d1a;
+            --primary-color: #34d399;
+            --glass-bg: rgba(15, 23, 42, 0.6);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            color: var(--text-main);
+            margin-bottom: 40px;
+        }
+        .logos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            width: 100%;
+            max-width: 1200px;
+        }
+        .logo-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+        .logo-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+        }
+        .logo-preview-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            background: rgba(0,0,0,0.3);
+            padding: 20px 30px;
+            border-radius: 12px;
+            width: 100%;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+        .logo-preview-area h2 {
+            font-size: 1.8rem;
+            margin: 0;
+            font-weight: 700;
+        }
+        .highlight {
+            color: var(--primary-color);
+        }
+        .app-logo {
+            width: 48px;
+            height: 48px;
+            flex-shrink: 0;
+        }
+        .description {
+            color: var(--text-muted);
+            line-height: 1.6;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            flex-grow: 1;
+            width: 100%;
+        }
+        .description strong {
+            color: var(--text-main);
+            font-size: 1.1rem;
+            display: block;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>請選擇您喜歡的 Aurora Todo Logo 分格</h1>
+    
+    <div class="logos-grid">
+        
+        <!-- Design 1 -->
+        <div class="logo-card">
+            <div class="logo-preview-area">
+                <svg class="app-logo" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="g1" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#34d399"/>
+                            <stop offset="1" stop-color="#3b82f6"/>
+                        </linearGradient>
+                    </defs>
+                    <path d="M8 30 C 18 16, 30 16, 40 30" stroke="url(#g1)" stroke-width="4" stroke-linecap="round"/>
+                    <path d="M14 36 C 22 26, 26 26, 34 36" stroke="url(#g1)" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
+                    <path d="M16 28 L 24 36 L 40 14" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <h2>Aurora <span class="highlight">Todo</span></h2>
+            </div>
+            <div class="description">
+                <strong>選項 1：極光圓弧形</strong>
+                結合雙層極光/日出圓弧以及鮮明打勾，漸層光暈極具流線感。
+            </div>
+        </div>
+
+        <!-- Design 2 -->
+        <div class="logo-card">
+            <div class="logo-preview-area">
+                <svg class="app-logo" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="g2" x1="0" y1="48" x2="48" y2="0" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#34d399"/>
+                            <stop offset="1" stop-color="#8b5cf6"/>
+                        </linearGradient>
+                    </defs>
+                    <path d="M14 26 L 22 34 L 38 16" stroke="url(#g2)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="24" cy="24" r="20" stroke="url(#g2)" stroke-width="3" stroke-dasharray="30 15 5 20" stroke-linecap="round" opacity="0.6"/>
+                    <circle cx="38" cy="16" r="4" fill="white"/>
+                </svg>
+                <h2>Aurora <span class="highlight">Todo</span></h2>
+            </div>
+            <div class="description">
+                <strong>選項 2：星群與軌跡</strong>
+                充滿活力的漸層打勾，搭配周圍不規則的星環軌跡代表流連的極光，還有一顆象徵「日出目標」的閃亮點。
+            </div>
+        </div>
+
+        <!-- Design 3 -->
+        <div class="logo-card">
+            <div class="logo-preview-area">
+                <svg class="app-logo" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24 4C12.95 4 4 12.95 4 24C4 35.05 12.95 44 24 44C35.05 44 44 35.05 44 24" stroke="#34d399" stroke-width="4" stroke-linecap="round"/>
+                    <path d="M14 24L22 32L36 12" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M30 6C36 10 40 16 42 22" stroke="#3b82f6" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+                <h2>Aurora <span class="highlight">Todo</span></h2>
+            </div>
+            <div class="description">
+                <strong>選項 3：簡約雙色缺口環</strong>
+                以不同顏色的缺口圓環交織組成光的流動意象，內部放置強而有力的純白色極簡打勾。
+            </div>
+        </div>
+
+        <!-- Design 4 -->
+        <div class="logo-card">
+            <div class="logo-preview-area">
+                <svg class="app-logo" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="4" y="4" width="40" height="40" rx="12" fill="#34d399" fill-opacity="0.1" stroke="#34d399" stroke-width="2"/>
+                    <path d="M12 26 L 20 34 L 34 18" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="24" cy="24" r="14" stroke="#3b82f6" stroke-width="2" opacity="0.6"/>
+                    <circle cx="34" cy="18" r="5" fill="#34d399"/>
+                </svg>
+                <h2>Aurora <span class="highlight">Todo</span></h2>
+            </div>
+            <div class="description">
+                <strong>選項 4：應用程式透視方塊</strong>
+                極具科技感的圓角透明光感方塊，內部有代表地球與焦點的圓圈，以及達成使命的亮綠色日出焦點。
+            </div>
+        </div>
+
+        <!-- Design 5 -->
+        <div class="logo-card">
+            <div class="logo-preview-area">
+                <svg class="app-logo" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24 6 L 8 40" stroke="#3b82f6" stroke-width="4" stroke-linecap="round" opacity="0.8"/>
+                    <path d="M24 6 L 28 14" stroke="#3b82f6" stroke-width="4" stroke-linecap="round" opacity="0.8"/>
+                    <path d="M16 28 C 24 24, 34 32, 42 20" stroke="#34d399" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
+                    <path d="M12 28 L 22 38 L 42 14" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <h2>Aurora <span class="highlight">Todo</span></h2>
+            </div>
+            <div class="description">
+                <strong>選項 5：A字與晨曦群山</strong>
+                背景呈現出代表 Aurora 的字母「A」與連綿山峰意象，搭配橫向極光流線光影，前景凸顯白色勾勾。
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

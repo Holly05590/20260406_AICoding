@@ -177,6 +177,18 @@ body {
     margin-bottom: 2rem;
 }
 
+.logo-title-container {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.app-logo {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+}
+
 .header-content h1 {
     font-size: 2.5rem;
     font-weight: 700;
